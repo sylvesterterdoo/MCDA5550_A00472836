@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/title_text_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Welcome to Hotel Reservation System"
+    android:textSize="30sp"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="20dp"
+    android:textColor="@color/black"
+    android:fontFamily="sans-serif-black"
+    android:textAlignment="center"
+    android:gravity="center_horizontal"/>
+
+    <!-- Guest Name -->
+    <TextView
+        android:id="@+id/guest_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest Name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/title_text_view"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+
+
+    <EditText
+        android:id="@+id/guest_name_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter guest name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guest_name_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Number of Guests -->
+    <TextView
+        android:id="@+id/num_guests_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number of Guests"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guest_name_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/num_guests_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter number of guests"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_guests_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Check-in Date -->
+    <TextView
+        android:id="@+id/check_in_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check-in Date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num_guests_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/check_in_date_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Select check-in date"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check_in_date_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Check-out Date -->
+    <TextView
+        android:id="@+id/check_out_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check-out Date"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check_in_date_edit_text"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/check_out_date_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Select check-out date"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check_out_date_label"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Search Button -->
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/check_out_date_edit_text"
+        android:layout_marginTop="32dp"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
