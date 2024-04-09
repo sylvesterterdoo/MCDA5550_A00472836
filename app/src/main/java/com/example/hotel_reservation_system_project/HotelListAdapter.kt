@@ -1,6 +1,7 @@
 package com.example.hotel_reservation_system_project
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HotelListAdapter(private val context: Context, private val hotelListData: List<HotelListData>) :
     RecyclerView.Adapter<HotelListAdapter.ViewHolder>() {
+
+    var selectedPosition = -1;
 
     private var layoutInflater: LayoutInflater = LayoutInflater.from(context)
     private var clickListener: ItemClickListener? = null
@@ -19,7 +22,11 @@ class HotelListAdapter(private val context: Context, private val hotelListData: 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val hotelName = hotelListData[position].hotel_name
+        if (selectedPosition == position)
+            holder.itemView.setBackgroundColor(Color.parseColor("#000000"))
+        else
+            holder.itemView.setBackgroundColor(Color.parseColor("#ffffff"))
+        val hotelName = hotelListData[position].name
         val hotelPrice = hotelListData[position].price
         val hotelAvailability = hotelListData[position].availability
 
@@ -47,7 +54,14 @@ class HotelListAdapter(private val context: Context, private val hotelListData: 
         }
 
         override fun onClick(view: View) {
-            clickListener?.onClick(view, adapterPosition)
+//            println("Position: ${adapterPosition}")
+//            clickListener?.onClick(view, adapterPosition)
+            if (clickListener != null) {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    clickListener?.onClick(view, adapterPosition)
+                }
+            }
         }
     }
 }
