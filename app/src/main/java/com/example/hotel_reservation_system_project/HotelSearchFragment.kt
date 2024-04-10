@@ -81,16 +81,10 @@ class HotelSearchFragment : Fragment() {
 
             numberOfGuests = guestCountEditText.text.toString()
 
-//            val bundle = Bundle().apply {
-//                putString("check in date", checkInStr)
-//                putString("check out date", checkOutStr)
-//                putString("numbers of guests", numberOfGuests)
-//            }
-
             val bundle = Bundle().apply {
                 putString(ReservationInfo.CHECK_IN_DATE.value, selectedCheckInDate.text.toString())
                 putString(ReservationInfo.CHECK_OUT_DATE.value, selectedCheckOutDate.text.toString())
-                putString(ReservationInfo.NUMBER_OF_GUESTS.value, selectedCheckOutDate.toString())
+                putString(ReservationInfo.NUMBER_OF_GUESTS.value, numberOfGuests.toString())
             }
 
             println("checkIn: $checkInStr, checkOut: $checkOutStr, guest count: $numberOfGuests")
