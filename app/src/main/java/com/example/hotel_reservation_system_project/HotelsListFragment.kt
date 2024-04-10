@@ -1,3 +1,4 @@
+/*
 package com.example.hotel_reservation_system_project
 
 import android.content.Intent
@@ -114,13 +115,16 @@ class HotelsListFragment: Fragment(), ItemClickListener {
 
 
     override fun onClick(view: View, position: Int) {
+        // Update selected position in adapter
+        hotelListAdapter.selectedPosition = position
+        hotelListAdapter.notifyDataSetChanged()
         Toast.makeText(context, "Item clicked at position " + position, Toast.LENGTH_SHORT).show();
     }
 
 }
+*/
 
 
-/*
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -242,4 +246,3 @@ class HotelsListFragment : Fragment(), ItemClickListener {
         hotelListAdapter.notifyDataSetChanged()
     }
 }
-*/
