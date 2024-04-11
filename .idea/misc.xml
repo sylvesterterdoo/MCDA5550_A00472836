@@ -7,6 +7,7 @@
         <entry key="app/src/main/res/layout/hotel_guest_details_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/hotel_list_fragment.xml" value="0.11822916666666666" />
         <entry key="app/src/main/res/layout/hotel_list_layout.xml" value="0.27794871794871795" />
+        <entry key="app/src/main/res/layout/hotel_reservation_confirmation_fragment.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/hotel_search_layout.xml" value="0.11822916666666666" />
       </map>
     </option>

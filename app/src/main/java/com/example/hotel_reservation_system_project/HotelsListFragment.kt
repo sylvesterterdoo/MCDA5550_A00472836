@@ -211,6 +211,7 @@ class HotelsListFragment : Fragment(), ItemClickListener {
             }
 
             override fun onFailure(call: Call<List<HotelListData>>, t: Throwable) {
+                println(t.message)
                 Toast.makeText(requireActivity(), "Network error: ${t.message}", Toast.LENGTH_LONG).show()
                 progressBar.visibility = View.GONE
             }
