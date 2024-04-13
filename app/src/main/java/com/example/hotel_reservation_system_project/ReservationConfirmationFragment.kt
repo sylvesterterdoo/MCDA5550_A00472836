@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 
 
 
+/*
 class ReservationConfirmationFragment : Fragment() {
 
     private lateinit var confirmationNumberTextView: TextView
@@ -31,7 +32,7 @@ class ReservationConfirmationFragment : Fragment() {
         confirmationNumberTextView.text = "Confirmation Number: $confirmationNumber"
     }
 }
-
+*/
 /*
 class ReservationConfirmationFragment  : Fragment() {
 
@@ -54,7 +55,6 @@ class ReservationConfirmationFragment  : Fragment() {
 
 
 
-/*
 class ReservationConfirmationFragment : AppCompatActivity() {
 
     private lateinit var confirmationNumberTextView: TextView
@@ -77,4 +77,3 @@ class ReservationConfirmationFragment : AppCompatActivity() {
         }
     }
 }
-*/
