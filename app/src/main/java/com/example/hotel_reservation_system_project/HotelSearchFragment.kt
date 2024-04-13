@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -57,6 +58,7 @@ class HotelSearchFragment : Fragment() {
         }
     }
 
+    /*
     @RequiresApi(Build.VERSION_CODES.O)
     private fun getDateFromCalendar(datePicker: TextView) {
         val calendar = Calendar.getInstance()
@@ -78,6 +80,34 @@ class HotelSearchFragment : Fragment() {
             month,
             day
         ).show()
+    } */
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun getDateFromCalendar(datePicker: TextView) {
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        val datePickerDialog = DatePickerDialog(
+            requireContext(),
+            { _, currentYear, monthOfYear, dayOfMonth ->
+                datePicker.text = "$dayOfMonth-${monthOfYear + 1}-$currentYear"
+                if (datePicker == selectedCheckInDate) {
+                    checkInDate = LocalDate.of(currentYear, monthOfYear + 1, dayOfMonth)
+                } else {
+                    checkOutDate = LocalDate.of(currentYear, monthOfYear + 1, dayOfMonth)
+                }
+            },
+            year,
+            month,
+            day
+        )
+
+        // Prevent the soft keyboard from automatically showing
+        datePickerDialog.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN)
+
+        datePickerDialog.show()
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

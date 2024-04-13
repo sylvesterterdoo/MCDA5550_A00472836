@@ -9,52 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
 
-
-/*
-class ReservationConfirmationFragment : Fragment() {
-
-    private lateinit var confirmationNumberTextView: TextView
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.hotel_reservation_confirmation, container, false)
-        confirmationNumberTextView = view.findViewById(R.id.confirmation_number_text_view)
-
-        val confirmationNumber = arguments?.getString("confirmationNumber") ?: "No Confirmation Number"
-        displayConfirmationNumber(confirmationNumber)
-
-        return view
-    }
-
-    private fun displayConfirmationNumber(confirmationNumber: String) {
-        confirmationNumberTextView.text = "Confirmation Number: $confirmationNumber"
-    }
-}
-*/
-/*
-class ReservationConfirmationFragment  : Fragment() {
-
-    private lateinit var confirmationNumberTextView: TextView
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.hotel_reservation_confirmation, container, false)
-        confirmationNumberTextView = view.findViewById(R.id.confirmation_number_text_view)
-        return view
-    }
-
-    fun displayConfirmationNumber(confirmationNumber: String) {
-        confirmationNumberTextView.text = "Confirmation Number: $confirmationNumber"
-    }
-}
-*/
-
-
-
 class ReservationConfirmationFragment : AppCompatActivity() {
 
     private lateinit var confirmationNumberTextView: TextView
@@ -71,7 +25,7 @@ class ReservationConfirmationFragment : AppCompatActivity() {
 
         // Display the confirmation number in the TextView
         if (confirmationNumber != null) {
-            confirmationNumberTextView.text = "Confirmation Number: $confirmationNumber"
+            confirmationNumberTextView.text = "Thank you for your reservation. Your Confirmation Number: $confirmationNumber"
         } else {
             confirmationNumberTextView.text = "No Confirmation Number"
         }

@@ -3,7 +3,7 @@
 <domain-config cleartextTrafficPermitted="true">
     <domain includeSubdomains="true">10.0.2.2</domain>
     <domain includeSubdomains="true">
-        apidemo-env.eba-6mnuxd8a.us-east-1.elasticbeanstalk.com
+        demo-env.eba-v3cghqbc.us-east-1.elasticbeanstalk.com
     </domain>
 </domain-config>
 </network-security-config>
