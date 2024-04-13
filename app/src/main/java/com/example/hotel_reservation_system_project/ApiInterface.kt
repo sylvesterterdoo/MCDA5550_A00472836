@@ -11,7 +11,7 @@ interface ApiInterface {
     fun getHotelsLists(): Call<List<HotelListData>>
 
 
-    @POST("/reservation")
+    @POST("/api/reservation")
     fun makeReservation(@Body request: HotelReservationRequest): Call<HotelReservationResponse>
 
 }

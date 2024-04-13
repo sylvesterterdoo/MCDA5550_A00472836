@@ -1,9 +1,9 @@
 package com.example.hotel_reservation_system_project
 
 class HotelReservationRequest(
-    var hotelName: String,
-    var checkInDate: String,
-    var checkOutDate: String,
-    var guestList: List<HotelGuestData>
+    val hotel_name: String,
+    val checkin: String,
+    val checkout: String,
+    val guest_list: List<HotelGuestData>
 ) {
 }
