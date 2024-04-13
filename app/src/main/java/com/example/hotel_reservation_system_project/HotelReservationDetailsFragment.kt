@@ -293,10 +293,14 @@ class HotelReservationDetailsFragment : Fragment() {
         val hotelPrice = arguments?.getString("hotelPrice")
         val hotelAvailability = arguments?.getString("hotelAvailability")
         val numberOfGuests = arguments?.getString(ReservationInfo.NUMBER_OF_GUESTS.value)?.toInt() ?: 0
+        val checkInDate = arguments?.getString(ReservationInfo.CHECK_IN_DATE.value)
+        val checkOutDate = arguments?.getString(ReservationInfo.CHECK_OUT_DATE.value)
 
         view.findViewById<TextView>(R.id.hotel_name_text_view).text = hotelName
         view.findViewById<TextView>(R.id.hotel_price_text_view).text = "Price: $hotelPrice"
         view.findViewById<TextView>(R.id.hotel_availability_text_view).text = "Availability: $hotelAvailability"
+        view.findViewById<TextView>(R.id.check_in_date_label).text = "Check-In Date: $checkInDate"
+        view.findViewById<TextView>(R.id.check_out_date_label).text = "Check-Out Date: $checkOutDate"
 
         val container = view.findViewById<LinearLayout>(R.id.container)
         submitButton = view.findViewById(R.id.submit_button)
