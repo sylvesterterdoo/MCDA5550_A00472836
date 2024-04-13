@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Hotel_Reservation_System_Project</string>
+    <string name="hotels_welcome_message">Welcome user, displaying hotels for %1$s guests staying from %2$s to %3$s</string>
+    <string name="hotels_details_message">Details: %1$s guests, Check-in: %2$s, Check-out: %3$s</string>
 </resources>

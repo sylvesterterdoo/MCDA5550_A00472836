@@ -56,8 +56,8 @@ class HotelListAdapter(
 
         fun bind(hotelData: HotelListData) {
             hotelName.text = hotelData.name
-            hotelAvailability.text = hotelData.availability
-            hotelPrice.text = hotelData.price
+            hotelAvailability.text = "Availability: ${hotelData.availability}"
+            hotelPrice.text = "Price: ${hotelData.price}"
         }
     }
 }

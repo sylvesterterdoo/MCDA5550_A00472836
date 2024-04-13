@@ -1,8 +1,36 @@
 package com.example.hotel_reservation_system_project
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+
+
+
+class ReservationConfirmationFragment : Fragment() {
+
+    private lateinit var confirmationNumberTextView: TextView
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.hotel_reservation_confirmation, container, false)
+        confirmationNumberTextView = view.findViewById(R.id.confirmation_number_text_view)
+
+        val confirmationNumber = arguments?.getString("confirmationNumber") ?: "No Confirmation Number"
+        displayConfirmationNumber(confirmationNumber)
+
+        return view
+    }
+
+    private fun displayConfirmationNumber(confirmationNumber: String) {
+        confirmationNumberTextView.text = "Confirmation Number: $confirmationNumber"
+    }
+}
 
 /*
 class ReservationConfirmationFragment  : Fragment() {
@@ -13,7 +41,7 @@ class ReservationConfirmationFragment  : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.hotel_reservation_confirmation_fragment, container, false)
+        val view = inflater.inflate(R.layout.hotel_reservation_confirmation, container, false)
         confirmationNumberTextView = view.findViewById(R.id.confirmation_number_text_view)
         return view
     }
@@ -22,13 +50,12 @@ class ReservationConfirmationFragment  : Fragment() {
         confirmationNumberTextView.text = "Confirmation Number: $confirmationNumber"
     }
 }
-*
-
- */
+*/
 
 
 
-class ReservationConfirmation : AppCompatActivity() {
+/*
+class ReservationConfirmationFragment : AppCompatActivity() {
 
     private lateinit var confirmationNumberTextView: TextView
 
@@ -50,3 +77,4 @@ class ReservationConfirmation : AppCompatActivity() {
         }
     }
 }
+*/
